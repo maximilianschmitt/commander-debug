@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+const { program, Command } = require("commander");
+const packageJSON = require("../package.json");
+
+program.version(packageJSON.version);
+
+const helloWorld = new Command("world");
+helloWorld.command("germany", "Saying hello to Germany", {
+  executableFile: "hello-world-germany",
+});
+
+program.addCommand(helloWorld);
+
+program.parse(process.argv);

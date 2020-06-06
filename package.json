@@ -1,0 +1,9 @@
+{
+  "version": "0.0.1",
+  "bin": {
+    "hello": "cli/hello"
+  },
+  "dependencies": {
+    "commander": "^5.1.0"
+  }
+}
