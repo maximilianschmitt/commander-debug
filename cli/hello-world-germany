@@ -4,4 +4,8 @@ const packageJSON = require("../package.json");
 
 program.version(packageJSON.version);
 
+program.action(() => {
+  console.log("Hello world germany");
+});
+
 program.parse(process.argv);

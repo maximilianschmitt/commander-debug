@@ -3,12 +3,10 @@ const { program, Command } = require("commander");
 const packageJSON = require("../package.json");
 
 program.version(packageJSON.version);
+program.command("world", "Saying hello world");
 
-const helloWorld = new Command("world");
-helloWorld.command("germany", "Saying hello to Germany", {
-  executableFile: "hello-world-germany",
+program.action(() => {
+  console.log("hello");
 });
-
-program.addCommand(helloWorld);
 
 program.parse(process.argv);

@@ -1,9 +1,12 @@
 #!/usr/bin/env node
-const { program } = require("commander");
+const { program, Command } = require("commander");
 const packageJSON = require("../package.json");
 
-program.version(packageJSON.version).action(() => {
-    console.log("Hello world")
-})
+program.version(packageJSON.version);
+program.command("germany", "Saying hello to Germany");
+
+program.action(() => {
+  console.log("Hello world");
+});
 
 program.parse(process.argv);
